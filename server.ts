@@ -4,6 +4,8 @@ const app = snowlight();
 app.use(app.json());
 
 app.get("/", async (req, res) => {
+	console.log('Time of request: ', new Date());
+	console.log('Request path: ', req.path);
 	res.send('Hello world!');
 });
 
